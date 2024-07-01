@@ -1,0 +1,133 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 112vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0 auto;
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  /* border: 1px solid black; */
+  position: relative;
+  width: 100%; /* Ensure full width */
+}
+
+.slideContainer {
+  position: relative;
+  width: 50%; /* Adjust based on the number of slides you want visible */
+  padding: 0 20px; /* Adjust padding around each image */
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically */
+  position: relative;
+}
+
+.mySlides {
+  width: 100%;
+  height: 500px;
+  object-fit: cover; /* Ensure images fill the container */
+  transition: filter 0.3s ease;
+  position: relative;
+}
+
+.mySlides:hover {
+  filter: grayscale(70%) opacity(0.7);
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px 70px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  font-size: 20px;
+}
+
+.slideContainer:hover .carouselButton {
+  opacity: 1;
+  border: 2px #042d49 solid;
+}
+.carouselButton:hover {
+  background: #042d49;
+  border: 2px white solid;
+  color: white;
+  transition-duration: 0.6s;
+}
+
+.carouselControls {
+  position: absolute;
+  top: 60px; /* Adjust top position */
+  right: 60px; /* Adjust right position */
+  display: flex;
+  z-index: 1;
+}
+
+.carouselControl {
+  cursor: pointer;
+  /* padding: 10px; */
+  color: black;
+  font-size: 18px;
+  user-select: none;
+}
+
+.carouselControl.prev {
+  margin-right: 10px;
+  border-right: 1px #042d49 solid;
+  padding-right: 40px;
+}
+
+.carouselControl.next {
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+.lastbutton {
+  margin-top: 5px;
+  background: transparent;
+  border: 2px #042d49 solid;
+  color: black;
+  padding: 20px 70px;
+  /* border: none; */
+  cursor: pointer;
+  opacity: 1;
+  font-size: 20px;
+}
+.lastbutton:hover {
+  background: #042d49;
+  border: 1px black solid;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .carousel > p {
+    font-size: 20px !important;
+    font-weight: 900;
+  }
+  .carousel {
+    height: 790px;
+    gap: 50px;
+    text-align: center;
+  }
+  .carouselControls {
+    top: 90px;
+    left: 110px;
+  }
+  .slideContainer {
+    width: 100%;
+  }
+}

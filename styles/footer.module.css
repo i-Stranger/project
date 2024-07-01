@@ -1,0 +1,30 @@
+.main {
+  padding: 40px;
+  height: 100%;
+  width: "";
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Cfont, sans-serif;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: Cfont, sans-serif;
+}
+.logodiv {
+  height: 40vh;
+  width: 30%;
+  /* border: 1px black solid; */
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-left: 0px;
+  padding-right: 40px;
+
+  font-family: Cfont, sans-serif;
+}
