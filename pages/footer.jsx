@@ -1,68 +1,54 @@
 import React from "react";
 import styles from "../styles/footer.module.css";
-const Footer = () => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+const Footer = ({ icons }) => {
   return (
-    <>
-      <div className={styles.main}>
-        <h1>Riezl Baker Real Estate</h1>
-        <div className={styles.text}>
-          <div className={styles.logodiv}>
-            <h1>Lake Oconee Real Estate Expert</h1>
-            <h1>Logo</h1>
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "0px",
-              border: "1px black  ",
-              justifyContent: "space-around",
-              height: "60vh",
-            }}
-          >
-            <div style={{ display: "flex", gap: "100px" }}>
-              <h3>
-                Email <br />
-                <span style={{ textDecoration: "underline" }}>
-                  RBAKER@LUXURYLAKEOCONEE.COM
-                </span>
-              </h3>
-              <span>
-                <h2>
-                  Phone <br />
-                  <span style={{ textDecoration: "underline" }}>
-                    (706) 347-2625
-                  </span>
-                </h2>
-              </span>
-              <br />
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "start",
-                alignItems: "start",
-                flexDirection: "column",
-              }}
-            >
-              <h3>
-                Address <br />
-                <span>1011 PARK LANE GREENSBORO, GA 30642</span>
-              </h3>
-              <h3>Quick Links</h3>
-            </div>
-
-            <p>
-              All information deemed reliable but not guaranteed and should be
-              independently reviewed and verified.
-            </p>
-          </div>
+    <footer className={styles.main}>
+      <h1>Riezl Baker Real Estate</h1>
+      <div className={styles.text}>
+        <div className={styles.logodiv}>
+          <h1>Lake Oconee Real Estate Expert</h1>
+          <div className={styles.logo}>Logo</div>
         </div>
-        <hr style={{ width: "98%" }} />
+        <div className={styles.emailmain}>
+          <div className={styles.email}>
+            <h3>Email</h3>
+            <p>RBAKER LUXURY LAKE OCONEE.COM</p>
+            <h2>Phone</h2>
+            <p className={styles.phone}>(706) 347-2625</p>
+          </div>
+          <div className={styles.address}>
+            <h3>Address</h3>
+            <p>1011 PARK LANE GREENSBORO, GA 30642</p>
+            <h3>Quick Links</h3>
+          </div>
+          <p className={styles.disclaimer}>
+            All information deemed reliable but not guaranteed and should be
+            independently reviewed and verified.
+          </p>
+        </div>
       </div>
-    </>
+      <hr className={styles.separator} />
+
+      <div className={styles.sponsor}>
+        <div className={styles.sponsers}>
+          <p>
+            Powered by <span>Luxury Presence</span>
+          </p>
+          <p>
+            Copyright © 2024 <span>| Privacy Policy </span>
+          </p>
+        </div>
+      </div>
+      <div className={styles.icons}>
+        {icons.map((item, index) => (
+          <div key={index} className={styles.icon}>
+            <FontAwesomeIcon icon={item.icon} />
+          </div>
+        ))}
+      </div>
+    </footer>
   );
 };
 

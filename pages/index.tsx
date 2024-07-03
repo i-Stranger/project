@@ -27,6 +27,7 @@ const Index: NextPage = () => {
   ];
 
   const [slideIndex, setSlideIndex] = useState(1);
+
   const [text, setText] = useState([
     "An excellent real estate professional, integrity, in-depth community and market knowledge, marketing savvy, effective negotiation skills and a high-quality professional network, all of which are hallmarks of how Riezl Baker works. Contact her today to learn more about Lake Oconee real estate and homes for sale!",
     "Real Estate Newsmaker, RISMedia 2024",
@@ -64,25 +65,16 @@ const Index: NextPage = () => {
     });
   };
 
-  const currentDiv = (n: number) => {
-    setSlideIndex(n);
-  };
-
   useEffect(() => {
     const x = document.getElementsByClassName(
       "mySlides"
     ) as HTMLCollectionOf<HTMLElement>;
-    const dots = document.getElementsByClassName(
-      "demo"
-    ) as HTMLCollectionOf<HTMLElement>;
+
     for (let i = 0; i < x.length; i++) {
       x[i].style.display = "none";
     }
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" w3-red", "");
-    }
+
     if (x[slideIndex - 1]) x[slideIndex - 1].style.display = "block";
-    if (dots[slideIndex - 1]) dots[slideIndex - 1].className += " w3-red";
   }, [slideIndex]);
 
   const [input, setInput] = useState({
@@ -307,7 +299,7 @@ const Index: NextPage = () => {
         <button>Let's Connect</button>
       </div>
 
-      <Footer />
+      <Footer icons={icons} />
     </>
   );
 };

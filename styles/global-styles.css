@@ -273,6 +273,8 @@ video {
   font-family: Cfont, sans-serif;
 }
 
+/*.................here is  the start............... */
+
 .testimonial {
   margin-top: 40px;
   height: 100vh;
@@ -311,6 +313,8 @@ video {
   font-size: 30px;
   font-weight: 100;
 }
+
+/*...........ssss..............*/
 
 .contact {
   height: 70vh;
@@ -615,5 +619,11 @@ video {
 
   .work > p {
     width: 90%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .riezelimage {
+    width: 200px;
+    /* height: 200px; */
   }
 }
