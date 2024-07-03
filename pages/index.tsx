@@ -1,95 +1,18 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import { useState, useEffect } from "react";
-import Carousel from "./slider";
-import Navbar from "./navbar";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faTwitter,
-  faInstagram,
-  faLinkedin,
-  faYoutube,
-  faTiktok,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import Footer from "./footer";
+import Carousel from "@/components/Slider";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Banner from "@/components/Banner";
+import Luxury from "@/components/Luxury";
+import Cards from "@/components/Cards";
+import Riezel from "@/components/Riezel";
+import Testimonial from "@/components/Testimonial";
+import Contact from "@/components/Contact";
+import News from "@/components/News";
+import Work from "@/components/Work";
 
 const Index: NextPage = () => {
-  const icons = [
-    { icon: faFacebookF, link: "https://www.facebook.com" },
-    { icon: faTwitter, link: "https://www.twitter.com" },
-    { icon: faInstagram, link: "https://www.instagram.com" },
-    { icon: faLinkedin },
-    { icon: faTiktok },
-    { icon: faYoutube },
-    { icon: faXTwitter },
-  ];
-
-  const [slideIndex, setSlideIndex] = useState(1);
-
-  const [text, setText] = useState([
-    "An excellent real estate professional, integrity, in-depth community and market knowledge, marketing savvy, effective negotiation skills and a high-quality professional network, all of which are hallmarks of how Riezl Baker works. Contact her today to learn more about Lake Oconee real estate and homes for sale!",
-    "Real Estate Newsmaker, RISMedia 2024",
-    "Top 1% Agent, Georgia MLS 2023",
-    "Top Luxury Real Estate Industry Leader, 2023, 2024, The Atlantan",
-  ]);
-
-  const [cards, setCards] = useState([
-    {
-      year: "2023",
-      production: "Top Producer, Over $102 Million in Sales Volume",
-      image: "/1.jpeg",
-      text: "Home Search",
-    },
-    {
-      year: "2022",
-      production: "Top Producer, Over $131 Million in Sales Volume",
-      image: "/2.jpeg",
-      text: "Home Valuation",
-    },
-    {
-      year: "2021",
-      production: "Top Producer, Over $115 Million in Sales Volume",
-      image: "/3.jpeg",
-      text: "Lets Connect",
-    },
-  ]);
-
-  const plusDivs = (n: number) => {
-    setSlideIndex((prev) => {
-      let newIndex = prev + n;
-      if (newIndex > 3) newIndex = 1;
-      if (newIndex < 1) newIndex = 3;
-      return newIndex;
-    });
-  };
-
-  useEffect(() => {
-    const x = document.getElementsByClassName(
-      "mySlides"
-    ) as HTMLCollectionOf<HTMLElement>;
-
-    for (let i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-
-    if (x[slideIndex - 1]) x[slideIndex - 1].style.display = "block";
-  }, [slideIndex]);
-
-  const [input, setInput] = useState({
-    name: "",
-    email: "",
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setInput((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
   return (
     <>
       <Head>
@@ -102,204 +25,16 @@ const Index: NextPage = () => {
       </Head>
 
       <Navbar />
-
-      <div className="main">
-        <video autoPlay muted>
-          <source src="/video.mp4" type="video/mp4" />
-        </video>
-        <div className="Heading">
-          <h1>Riezl Baker Real Estate</h1>
-          <hr style={{ width: "20%" }} />
-          <h2>LAKE OCONEE'S TOP LUXURY REALTOR FOR 23 YEARS</h2>
-
-          <div className="buttons">
-            <button>Featured properties</button>
-            <button>Past Transactions</button>
-          </div>
-        </div>
-      </div>
-
-      <div className="text">
-        <h2>TOP LUXURY REAL ESTATE INDUSTRY LEADER 2021, 2022, AND 2023</h2>
-        <h1 style={{ fontSize: "45px", textAlign: "center", color: "#042d49" }}>
-          RIEZL BAKER, LAKE OCONEE'S REALTOR®
-        </h1>
-        {text.map((item, index) => (
-          <h3 key={index} style={{ textAlign: "center" }}>
-            {item}
-          </h3>
-        ))}
-      </div>
-
-      <div className="cards">
-        {cards.map((item, index) => (
-          <div key={index} className="card22">
-            <div className="cardtext">
-              <h1>{item.year}</h1>
-              <h3>{item.production}</h3>
-            </div>
-            <div className="cardimage">
-              <img
-                src={item.image}
-                alt=""
-                style={{
-                  height: "100%",
-                  width: "100%",
-                  backgroundAttachment: "fixed",
-                }}
-              />
-              <h3>{item.text}</h3>
-              <hr />
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="riezel">
-        <div className="riezelimage">
-          <img src="4.jpeg" alt="" style={{ height: "100%", width: "100%" }} />
-          <div className="icons">
-            {icons.map((item, index) => {
-              return (
-                <div key={index} className="icon">
-                  <FontAwesomeIcon icon={item.icon} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="reizeltext">
-          <h1>Meet Reizel</h1>
-          <hr style={{ width: "90%", marginTop: "20px" }} />
-          <h3>
-            Riezl Baker is an award-winning Realtor® with 23 years of real
-            estate experience at Lake Oconee, Georgia. A resident since 1997,
-            she is well-known for her business accomplishments and extensive
-            community involvement. In 2020, she and her husband Ted co-founded
-            Luxury Lake Oconee Real Estate Group to combine their over 40 years
-            of experience in the Lake Oconee market and with a mission to
-            provide the highest level of service to clients.
-          </h3>
-          <h3>
-            In 2023, Riezl closed over $102 million in sales. She has been
-            recognized as a 2024 "Top Luxury Real Estate Leader'' by The
-            Atlantan magazine and a 2024 “Real Estate Newsmaker & Achiever'' by
-            RISMedia. She was recognized as a 2023 Top Producer and was
-            previously awarded the Crystal Phoenix Award by the Lake Country
-            Board of Realtors® in 2022.
-          </h3>
-          <a
-            style={{
-              marginTop: "90px",
-              textDecoration: "underline",
-              cursor: "pointer",
-              fontSize: "18px",
-              fontWeight: "900",
-            }}
-          >
-            Learn More
-          </a>
-        </div>
-      </div>
-
-      <div className="testimonial">
-        <h1>Testimonial</h1>
-        <div className="sliderimages">
-          <img
-            className="mySlides"
-            src="5.jpg"
-            style={{ width: "100%", height: "500px" }}
-          />
-          <img
-            className="mySlides"
-            src="6.jpg"
-            style={{ width: "100%", height: "500px" }}
-          />
-          <img
-            className="mySlides"
-            src="7.jpg"
-            style={{ width: "100%", height: "500px" }}
-          />
-        </div>
-
-        <div className="sliderbuttons">
-          <button className="nextprev" onClick={() => plusDivs(-1)}>
-            ❮{" "}
-          </button>
-          <button className="nextprev " onClick={() => plusDivs(1)}>
-            {" "}
-            ❯
-          </button>
-        </div>
-      </div>
-
+      <Banner />
+      <Luxury />
+      <Cards />
+      <Riezel />
+      <Testimonial />
       <Carousel />
-
-      <div className="contact">
-        <h1 className="contacth1" style={{ fontSize: "48px", color: "white" }}>
-          Receive exclusive off-market listings in your inbox.
-        </h1>
-        <div className="inputdiv">
-          <input
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={input.name}
-            onChange={handleChange}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            name="email"
-            value={input.email}
-            onChange={handleChange}
-          />
-          <button>Submit</button>
-        </div>
-
-        <div className="checkboxdiv">
-          <input type="checkbox" />
-          <p style={{ fontSize: "20px", color: "white" }}>
-            By providing Riezl Baker your contact information, you acknowledge
-            and agree to our Privacy Policy and consent to receiving marketing
-            communications, including through automated calls, texts, and
-            emails, some of which may use artificial or prerecorded voices. This
-            consent isn’t necessary for purchasing any products or services and
-            you may opt out at any time. To opt out from texts, you can reply,
-            ‘stop’ at any time. To opt out from emails, you can click on the
-            unsubscribe link in the emails. Message and data rates may apply.
-          </p>
-        </div>
-      </div>
-
-      <div className="news">
-        <div className="newstext">
-          <h1>In the News</h1>
-          <p>
-            We are excited to let the world know about everything we are up-to
-            in both real estate and lifestyle. Catch us in the local news or in
-            some of our favorite publications.
-          </p>
-          <button>View More</button>
-        </div>
-        <div className="newsimage">
-          <img src="/8.jpeg" alt="" height="500px" width="600px" />
-        </div>
-      </div>
-
-      <div className="work">
-        <h1>Work With Riezl</h1>
-        <hr />
-        <p>
-          A consistent top producer in the Lake Oconee area, Riezl has been
-          recognized with numerous awards for her business accomplishments and
-          community involvement. Contact Riezl today if you are thinking of
-          selling or buying, or both.
-        </p>
-        <button>Let's Connect</button>
-      </div>
-
-      <Footer icons={icons} />
+      <Contact />
+      <News />
+      <Work />
+      <Footer />
     </>
   );
 };

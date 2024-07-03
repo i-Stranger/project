@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const Footer = ({ icons }) => {
+import { data } from "@/data/data";
+const Footer = () => {
   return (
     <footer className={styles.main}>
       <h1>Riezl Baker Real Estate</h1>
@@ -42,7 +42,7 @@ const Footer = ({ icons }) => {
         </div>
       </div>
       <div className={styles.icons}>
-        {icons.map((item, index) => (
+        {data?.icons.map((item, index) => (
           <div key={index} className={styles.icon}>
             <FontAwesomeIcon icon={item.icon} />
           </div>
