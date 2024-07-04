@@ -44,20 +44,20 @@ export const data = {
     },
   ],
 
-  riezettext: [
-    `Riezl Baker is an award-winning Realtor® with 23 years of real
+  riezeltext: [
+    `'Riezl Baker is an award-winning Realtor® with 23 years of real
             estate experience at Lake Oconee, Georgia. A resident since 1997,
             she is well-known for her business accomplishments and extensive
             community involvement. In 2020, she and her husband Ted co-founded
             Luxury Lake Oconee Real Estate Group to combine their over 40 years
             of experience in the Lake Oconee market and with a mission to
-            provide the highest level of service to clients`,
+            provide the highest level of service to clients'`,
 
-    ` In 2023, Riezl closed over $102 million in sales. She has been
+    ` 'In 2023, Riezl closed over $102 million in sales. She has been
             recognized as a 2024 "Top Luxury Real Estate Leader'' by The
             Atlantan magazine and a 2024 “Real Estate Newsmaker & Achiever'' by
             RISMedia. She was recognized as a 2023 Top Producer and was
             previously awarded the Crystal Phoenix Award by the Lake Country
-            Board of Realtors® in 2022.`,
+            Board of Realtors® in 2022.'`,
   ],
 };
