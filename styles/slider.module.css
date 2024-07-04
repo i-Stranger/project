@@ -1,13 +1,21 @@
+.carouselmain {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 .carousel {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 112vh;
+  width: 1200px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 40px;
+  gap: 100px;
   margin: 0 auto;
 }
 
@@ -86,14 +94,25 @@
 }
 
 .carouselControl.prev {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   border-right: 1px #042d49 solid;
   padding-right: 40px;
+  transition-duration: 0.6s;
+  padding: 10px;
 }
-
+.carouselControl.prev:hover {
+  background: #042d49;
+  color: white;
+}
 .carouselControl.next {
-  margin-left: 10px;
+  /* margin-left: 10px; */
   padding-left: 20px;
+  transition-duration: 0.6s;
+  padding: 10px;
+}
+.carouselControl.next:hover {
+  background: #042d49;
+  color: white;
 }
 
 .lastbutton {
@@ -106,6 +125,7 @@
   cursor: pointer;
   opacity: 1;
   font-size: 20px;
+  transition-duration: 0.6s;
 }
 .lastbutton:hover {
   background: #042d49;

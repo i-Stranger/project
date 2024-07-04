@@ -39,7 +39,7 @@ export const data = {
     {
       year: "2021",
       production: "Top Producer, Over $115 Million in Sales Volume",
-      image: "/3.jpeg",
+      image: "/1.jpeg",
       text: "Lets Connect",
     },
   ],

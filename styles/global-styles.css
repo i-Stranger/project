@@ -29,8 +29,8 @@ a {
 } */
 
 .main {
+  min-height: 100vh;
   height: 100%;
-  width: "";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,10 +130,15 @@ video {
   font-weight: 400;
   font-family: Cfont, sans-serif;
 }
-
+.cardsmain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .cards {
   height: 100%;
-  width: "";
+  width: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,6 +170,7 @@ video {
 
 .cardimage {
   height: 300px;
+  width: 380px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -208,11 +214,17 @@ video {
   bottom: 50px;
   background: #042d49;
 }
+.riezelmain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .riezel {
   margin-top: 40px;
   height: 100%;
-  width: 100%;
+  width: 1200px;
   /* border: 1px black solid; */
   display: flex;
   align-items: center;
@@ -264,7 +276,7 @@ video {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 15px;
+  gap: 7px;
   font-family: Cfont, sans-serif;
 
   /* border: 1px black solid; */
@@ -275,11 +287,16 @@ video {
 }
 
 /*.................here is  the start............... */
-
+.testimonialmain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .testimonial {
   margin-top: 40px;
-  height: 100vh;
-  width: 100%;
+  height: 100%;
+  width: 1100px;
   /* border: 1px black solid; */
   display: flex;
   justify-content: center;
@@ -294,7 +311,7 @@ video {
 
 .sliderimages {
   height: "";
-  width: 900px;
+  width: 100%;
   /* border: 1px black solid; */
 }
 
@@ -307,19 +324,27 @@ video {
 }
 
 .nextprev {
-  height: 40px;
-  width: 80px;
   background: transparent;
   border: 2px #042d49 solid;
+  padding: 5px 40px;
   font-size: 30px;
   font-weight: 100;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+.nextprev:hover {
+  background: #042d49;
+  color: white;
 }
 
 /*...........ssss..............*/
 
 .contact {
-  height: 70vh;
-  width: 99.83%;
+  margin-top: 40px;
+  padding: 60px;
+  height: 70%;
+  /* width: 99.83%; */
   background-color: #042d49;
   border: 1px #042d49 solid;
   display: flex;
@@ -370,22 +395,32 @@ input::placeholder {
 .checkboxdiv {
   display: flex;
   align-items: start;
-  padding: 50px;
+  /* padding: 10px; */
   text-align: start;
 }
-
-.news {
-  height: 80vh;
+.newsmain {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.news {
+  width: 1200px;
+  height: 80%;
+  /* width: 100%; */
+  padding: 60px;
+  /* padding: 40px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
   /* padding: 30px; */
   /* border: 1px black solid; */
 }
 
 .newstext {
-  padding: 50px;
+  /* padding: 50px; */
   display: flex;
   justify-content: start;
   align-items: start;
@@ -418,7 +453,7 @@ input::placeholder {
 }
 
 .newsimage {
-  padding: 30px;
+  /* padding: 30px; */
 }
 
 .work {
@@ -471,6 +506,7 @@ input::placeholder {
   .main {
     background-image: url("../public/8.jpeg");
     height: 100vh;
+    background-repeat: no-repeat;
   }
 
   .Heading > h1 {
@@ -500,7 +536,7 @@ input::placeholder {
   }
 
   .card22 {
-    width: 100%;
+    width: "";
     padding: 0;
     /* padding: 10px; */
   }

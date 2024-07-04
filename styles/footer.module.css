@@ -1,19 +1,29 @@
+.footermain {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .main {
+  width: 1200px;
   padding: 40px;
   display: flex;
+  gap: 30px;
   flex-direction: column;
   align-items: center;
   font-family: Cfont, sans-serif;
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .text {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  width: 100%;
-  max-width: 1200px;
+  /* gap: 40px; */
+  /* width: 100%; */
+  /* max-width: 1200px; */
 }
 
 .logodiv {
@@ -34,7 +44,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 20px;
+  /* padding: 20px; */
   /* border: 1px solid black; */
   height: auto;
   gap: 20px;

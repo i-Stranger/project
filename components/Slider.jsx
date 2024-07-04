@@ -29,38 +29,40 @@ const Carousel = () => {
   };
 
   return (
-    <div className={styles.carousel}>
-      <p style={{ fontSize: "40px" }}> Lake Oconee Real Estate for Sale</p>
-      <div
-        className={styles.carouselInner}
-        style={{ transform: `translateX(-${slideIndex * 100}%)` }}
-      >
-        {slides.map((slide, index) => (
-          <div key={index} className={styles.slideContainer}>
-            <img
-              className={styles.mySlides}
-              src={slide}
-              alt={`Slide ${index + 1}`}
-            />
-            <button className={styles.carouselButton}>View Property</button>
+    <div className={styles.carouselmain}>
+      <div className={styles.carousel}>
+        <p style={{ fontSize: "40px" }}> Lake Oconee Real Estate for Sale</p>
+        <div
+          className={styles.carouselInner}
+          style={{ transform: `translateX(-${slideIndex * 100}%)` }}
+        >
+          {slides.map((slide, index) => (
+            <div key={index} className={styles.slideContainer}>
+              <img
+                className={styles.mySlides}
+                src={slide}
+                alt={`Slide ${index + 1}`}
+              />
+              <button className={styles.carouselButton}>View Property</button>
+            </div>
+          ))}
+        </div>
+        <div className={styles.carouselControls}>
+          <div
+            className={`${styles.carouselControl} ${styles.prev}`}
+            onClick={() => plusSlides(-1)}
+          >
+            Next{" "}
           </div>
-        ))}
-      </div>
-      <div className={styles.carouselControls}>
-        <div
-          className={`${styles.carouselControl} ${styles.prev}`}
-          onClick={() => plusSlides(-1)}
-        >
-          Next{" "}
+          <div
+            className={`${styles.carouselControl} ${styles.next}`}
+            onClick={() => plusSlides(1)}
+          >
+            Previous
+          </div>
         </div>
-        <div
-          className={`${styles.carouselControl} ${styles.next}`}
-          onClick={() => plusSlides(1)}
-        >
-          Previous
-        </div>
+        <button className={styles.lastbutton}>View All</button>
       </div>
-      <button className={styles.lastbutton}>View All</button>
     </div>
   );
 };
