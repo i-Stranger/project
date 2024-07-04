@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { plusDivs } from "@/helpers/helpers";
+import React, { useState } from "react";
+import { Effect, plusDivs } from "@/helpers/helpers";
+
 export default function Testimonial() {
   const [slideIndex, setSlideIndex] = useState(1);
 
-  useEffect(() => {
-    const x = document.getElementsByClassName("mySlides");
-
-    for (let i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-
-    if (x[slideIndex - 1]) x[slideIndex - 1].style.display = "block";
-  }, [slideIndex]);
+  Effect(slideIndex); // Pass slideIndex to the Effect
 
   return (
     <div className="testimonial">
@@ -33,13 +26,14 @@ export default function Testimonial() {
           style={{ width: "100%", height: "500px" }}
         />
       </div>
-
       <div className="sliderbuttons">
-        <button className="nextprev" onClick={() => plusDivs(-1)}>
-          ❮{" "}
+        <button
+          className="nextprev"
+          onClick={() => plusDivs(-1, setSlideIndex)}
+        >
+          ❮
         </button>
-        <button className="nextprev " onClick={() => plusDivs(1)}>
-          {" "}
+        <button className="nextprev" onClick={() => plusDivs(1, setSlideIndex)}>
           ❯
         </button>
       </div>

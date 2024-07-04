@@ -6,6 +6,7 @@ export default function Contact() {
     name: "",
     email: "",
   });
+
   return (
     <div className="contact">
       <h1 className="contacth1" style={{ fontSize: "48px", color: "white" }}>
@@ -17,14 +18,14 @@ export default function Contact() {
           placeholder="Name"
           name="name"
           value={input.name}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e, setInput)}
         />
         <input
           type="email"
           placeholder="Email"
           name="email"
           value={input.email}
-          onChange={handleChange}
+          onChange={(e) => handleChange(e, setInput)}
         />
         <button>Submit</button>
       </div>
