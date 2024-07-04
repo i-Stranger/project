@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Cfont, sans-serif;
 }
 
 @font-face {
@@ -342,8 +343,11 @@ video {
   padding-left: 10px;
   background: transparent;
   border-bottom: 2px white solid;
+  color: white;
 }
-
+input::placeholder {
+  color: white;
+}
 .inputdiv > button {
   height: 70px;
   display: flex;
@@ -557,6 +561,7 @@ video {
   .nextprev {
     font-size: 18px;
   }
+
   .contact {
     margin-top: 20px;
     flex-direction: column;

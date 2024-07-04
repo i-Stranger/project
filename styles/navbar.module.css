@@ -85,6 +85,8 @@
 .span {
   cursor: pointer;
   padding-right: 30px;
+  transform: rotate(90deg);
+  margin-top: 23px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

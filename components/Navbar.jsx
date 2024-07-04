@@ -41,7 +41,7 @@ const Navbar = () => {
             <button className={styles.button}>Let's Connect</button>
           </div>
           <span className={styles.span} onClick={openNav}>
-            open
+            |||
           </span>
         </div>
       </div>
