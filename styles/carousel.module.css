@@ -1,0 +1,60 @@
+.carouselmain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40px; */
+}
+.carouselWrapper {
+  height: 700px;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-size: 35px;
+}
+
+.dotsContainer {
+  background-color: #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+}
+
+.arrowsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  display: visible;
+  margin-top: 30px; /* Adjust as needed to position below the images */
+}
+
+.arrow {
+  display: inline-block;
+  margin: 0 15px; /* Adjust spacing as needed */
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px #042d49 solid;
+  color: #042d49;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 20px;
+  transition-duration: 0.6s;
+  font-weight: 600;
+}
+.arrow:hover {
+  background: #042d49;
+  color: white;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none; /* Hide default arrows */
+}
+@media only screen and (max-width: 1200px) {
+  .carouselWrapper {
+    width: 80% !important;
+  }
+}

@@ -29,7 +29,6 @@ a {
 } */
 
 .main {
-  min-height: 100vh;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -49,7 +48,6 @@ video {
 
 .Heading {
   position: absolute;
-  height: 100%;
   width: 100%;
   top: 60%;
   left: 50%;
@@ -95,6 +93,7 @@ video {
   border: none;
   cursor: pointer;
   border-bottom: 2px white solid;
+  transition-duration: 0.3s;
 }
 
 .buttons > button::after {
@@ -126,16 +125,19 @@ video {
   font-family: Cfont, sans-serif;
   text-align: center;
 }
+
 .Heading > h1 {
   font-weight: 400;
   font-family: Cfont, sans-serif;
 }
+
 .cardsmain {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .cards {
   height: 100%;
   width: 1200px;
@@ -276,7 +278,7 @@ video {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 7px;
+  gap: 30px;
   font-family: Cfont, sans-serif;
 
   /* border: 1px black solid; */
@@ -286,59 +288,22 @@ video {
   font-family: Cfont, sans-serif;
 }
 
-/*.................here is  the start............... */
-.testimonialmain {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.testimonial {
-  margin-top: 40px;
-  height: 100%;
-  width: 1100px;
-  /* border: 1px black solid; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.testimonial > h1 {
-  font-size: 40px;
-  padding-bottom: 20px;
-}
-
-.sliderimages {
-  height: "";
-  width: 100%;
-  /* border: 1px black solid; */
-}
-
-.sliderbuttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  padding-top: 20px;
-}
-
-.nextprev {
-  background: transparent;
-  border: 2px #042d49 solid;
-  padding: 5px 40px;
-  font-size: 30px;
-  font-weight: 100;
-  transition-duration: 0.6s;
-  cursor: pointer;
-}
-
-.nextprev:hover {
-  background: #042d49;
+.slick-prev:before,
+.slick-next:before {
   color: white;
 }
 
-/*...........ssss..............*/
+.slick-prev {
+  left: 10px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.slick-next {
+  right: 10px;
+  bottom: 0px;
+  z-index: 1;
+}
 
 .contact {
   margin-top: 40px;
@@ -452,10 +417,6 @@ input::placeholder {
   color: white;
 }
 
-.newsimage {
-  /* padding: 30px; */
-}
-
 .work {
   height: 100vh;
   display: flex;
@@ -505,6 +466,7 @@ input::placeholder {
 @media only screen and (max-width: 960px) {
   .main {
     background-image: url("../public/8.jpeg");
+    background-size: 100% 100%;
     height: 100vh;
     background-repeat: no-repeat;
   }
@@ -533,6 +495,7 @@ input::placeholder {
     flex-direction: column;
     /* border: 1px black solid; */
     padding: 20px;
+    gap: 40px;
   }
 
   .card22 {

@@ -1,47 +1,81 @@
-import React, { useState } from "react";
-import { Effect, plusDivs } from "@/helpers/helpers";
+import React, { useState, useRef } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from "@/styles/carousel.module.css"; // Import the CSS module
 
-export default function Testimonial() {
-  const [slideIndex, setSlideIndex] = useState(1);
+const CarouselComponent = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const sliderRef = useRef(null);
 
-  Effect(slideIndex); // Pass slideIndex to the Effect
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    beforeChange: (current, next) => setSlideIndex(next),
+
+    appendDots: (dots) => (
+      <div className={styles.dotsContainer}>
+        <ul style={{ margin: "0px" }}> {dots} </ul>
+      </div>
+    ),
+  };
 
   return (
-    <div className="testimonialmain">
-      <div className="testimonial">
-        <h1>Testimonial</h1>
-        <div className="sliderimages">
-          <img
-            className="mySlides"
-            src="5.jpg"
-            style={{ width: "100%", height: "500px" }}
-          />
-          <img
-            className="mySlides"
-            src="6.jpg"
-            style={{ width: "100%", height: "500px" }}
-          />
-          <img
-            className="mySlides"
-            src="7.jpg"
-            style={{ width: "100%", height: "500px" }}
-          />
-        </div>
-        <div className="sliderbuttons">
+    <div className={styles.carouselmain}>
+      <div className={styles.carouselWrapper}>
+        <h2> Testimonial </h2>
+        <Slider style={{ marginTop: "40px" }} ref={sliderRef} {...settings}>
+          <div>
+            <img
+              src="5.jpg"
+              alt="Slide 1"
+              style={{ height: "500px", width: "100%" }}
+            />
+          </div>
+          <div>
+            <img
+              src="6.jpg"
+              alt="Slide 2"
+              style={{ height: "500px", width: "100%" }}
+            />
+          </div>
+          <div>
+            <img
+              src="7.jpg"
+              alt="Slide 3"
+              style={{ height: "500px", width: "100%" }}
+            />
+          </div>
+          <div>
+            <img
+              src="5.jpg"
+              alt="Slide 4"
+              style={{ height: "500px", width: "100%" }}
+            />
+          </div>
+        </Slider>
+        <div className={styles.arrowsContainer}>
           <button
-            className="nextprev"
-            onClick={() => plusDivs(-1, setSlideIndex)}
+            className={styles.arrow}
+            onClick={() => sliderRef.current.slickPrev()}
           >
-            ❮
+            Prev
           </button>
           <button
-            className="nextprev"
-            onClick={() => plusDivs(1, setSlideIndex)}
+            className={styles.arrow}
+            onClick={() => sliderRef.current.slickNext()}
           >
-            ❯
+            Next
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default CarouselComponent;

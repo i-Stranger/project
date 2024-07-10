@@ -1,16 +1,18 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Carousel from "@/components/Slider";
+// import Carousel from "@/components/Slider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import Luxury from "@/components/Luxury";
 import Cards from "@/components/Cards";
 import Riezel from "@/components/Riezel";
-import Testimonial from "@/components/Testimonial";
 import Contact from "@/components/Contact";
 import News from "@/components/News";
 import Work from "@/components/Work";
+import Carousel from "@/components/Slider";
+import CarouselComponent from "@/components/Testimonial";
+// import NextJsCarousel from '@/components/slider2';
 
 const Index: NextPage = () => {
   return (
@@ -29,7 +31,7 @@ const Index: NextPage = () => {
       <Luxury />
       <Cards />
       <Riezel />
-      <Testimonial />
+      <CarouselComponent />
       <Carousel />
       <Contact />
       <News />

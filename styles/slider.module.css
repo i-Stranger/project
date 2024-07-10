@@ -140,12 +140,16 @@
   }
   .carousel {
     height: 790px;
-    gap: 50px;
+    gap: 80px;
     text-align: center;
   }
   .carouselControls {
-    top: 90px;
-    left: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+    top: 60px;
+    left: 70px;
   }
   .slideContainer {
     width: 100%;

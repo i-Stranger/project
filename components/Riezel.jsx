@@ -26,7 +26,7 @@ export default function Riezel() {
           })}
           <a
             style={{
-              marginTop: "90px",
+              marginTop: "5px",
               textDecoration: "underline",
               cursor: "pointer",
               fontSize: "18px",
