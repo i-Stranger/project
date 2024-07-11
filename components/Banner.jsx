@@ -1,7 +1,12 @@
 export default function Banner() {
   return (
     <div className="main">
-      <video autoPlay muted>
+      <video
+        autoPlay
+        muted
+        poster="video.mp4"
+        style={{ height: "100%", width: "100%" }}
+      >
         <source src="/video.mp4" type="video/mp4" />
       </video>
       <div className="Heading">
