@@ -28,7 +28,7 @@ export default function Cards() {
         {data?.cards.map((item, index) => (
           <div key={index} className="card22">
             <div className="cardtext">
-              <h1>{number}</h1>
+              <h1 style={{ color: "#f4cd82" }}>{number}</h1>
               <h3>{item.production}</h3>
             </div>
             <div className="cardimage">

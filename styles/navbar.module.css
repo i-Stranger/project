@@ -45,18 +45,28 @@
 .nav {
   display: flex;
   justify-content: space-around;
-  background: transparent; /* Initial transparent background */
+  background: white; /* Initial transparent background */
   color: white;
   position: fixed;
   width: 100%;
   top: 0;
-  transition: background-color 0.3s;
-  z-index: 1;
+  transition: background-color 2s;
+  z-index: 3;
   padding: 20px;
+  /* border: 1px black solid; */
 }
-
+.nav > img {
+  height: 50px;
+  width: 60px;
+}
 .nav.scrolled {
-  background: #042d49; /* Background color when scrolled */
+  /* background: #f4cd82; */
+  background: linear-gradient(
+    to right,
+    rgba(244, 205, 130, 0.7),
+    rgba(221, 179, 105, 0.8)
+  );
+  transition-duration: 0.7s;
 }
 
 .buttons {
@@ -67,7 +77,7 @@
 
 .button {
   background: transparent;
-  color: white;
+  color: black;
   font-size: 14px;
   font-weight: 800;
   padding: 15px 20px;
@@ -78,7 +88,7 @@
 }
 .button:hover {
   background-color: white;
-  color: #042d49;
+  color: #f4cd82;
   /* border-radius: 10px; */
 }
 
@@ -91,6 +101,7 @@
 }
 
 .span {
+  color: black;
   cursor: pointer;
   padding-right: 30px;
   transform: rotate(90deg);

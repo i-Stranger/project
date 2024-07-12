@@ -31,6 +31,7 @@ export default function Riezel() {
               cursor: "pointer",
               fontSize: "18px",
               fontWeight: "900",
+              color: "#f4cd82",
             }}
           >
             Learn More

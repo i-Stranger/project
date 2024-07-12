@@ -57,7 +57,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: black;
   padding: 20px 70px;
   border: none;
   cursor: pointer;
@@ -68,12 +68,12 @@
 
 .slideContainer:hover .carouselButton {
   opacity: 1;
-  border: 2px #042d49 solid;
+  border: 2px #f4cd82 solid;
 }
 .carouselButton:hover {
-  background: #042d49;
-  border: 2px white solid;
-  color: white;
+  background: #f4cd82;
+  border: 2px black solid;
+  color: black;
   transition-duration: 0.6s;
 }
 
@@ -95,14 +95,14 @@
 
 .carouselControl.prev {
   /* margin-right: 10px; */
-  border-right: 1px #042d49 solid;
+  border-right: 1px #f4cd82 solid;
   padding-right: 40px;
   transition-duration: 0.6s;
   padding: 10px;
 }
 .carouselControl.prev:hover {
-  background: #042d49;
-  color: white;
+  background: #f4cd82;
+  color: black;
 }
 .carouselControl.next {
   /* margin-left: 10px; */
@@ -111,14 +111,14 @@
   padding: 10px;
 }
 .carouselControl.next:hover {
-  background: #042d49;
-  color: white;
+  background: #f4cd82;
+  color: black;
 }
 
 .lastbutton {
   margin-top: 5px;
   background: transparent;
-  border: 2px #042d49 solid;
+  border: 2px #f4cd82 solid;
   color: black;
   padding: 20px 70px;
   /* border: none; */
@@ -128,8 +128,8 @@
   transition-duration: 0.6s;
 }
 .lastbutton:hover {
-  background: #042d49;
-  color: white;
+  background: #f4cd82;
+  color: black;
 }
 
 @media screen and (max-width: 600px) {

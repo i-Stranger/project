@@ -15,6 +15,9 @@
   font-family: Cfont, sans-serif;
   background-color: white;
 }
+.main > h1 {
+  color: #f4cd82;
+}
 
 .text {
   display: flex;
@@ -32,6 +35,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  color: #f4cd82;
   /* padding: 20px; */
 }
 
@@ -54,6 +58,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: black;
 }
 
 .phone {
@@ -64,6 +69,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: #f4cd82;
 }
 
 .disclaimer {
@@ -102,18 +108,18 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 1px black solid;
+  border: 1px f4cd82 solid;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  color: #042d49;
+  color: #f4cd82;
   transition-duration: 0.3s;
   cursor: pointer;
 }
 .icon:hover {
-  background-color: #042d49;
-  color: white;
+  background-color: #f4cd82;
+  color: black;
 }
 @media only screen and (max-width: 960px) {
   .main {

@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <>
       <div className={`${styles.nav} ${scrollNav ? styles.scrolled : ""}`}>
-        <h1>Logo</h1>
+        <img src="logo.jpg" alt="" />
         <div className={styles.navbuttonmain}>
           <div className={styles.buttons}>
             <button className={styles.button}>Home</button>

@@ -60,7 +60,7 @@ video {
 
 .Heading > h1 {
   font-size: 70px;
-  color: white;
+  color: black;
   padding-bottom: 20px;
   text-align: center;
   width: 100%;
@@ -69,7 +69,7 @@ video {
 .Heading > h2 {
   font-size: 17px;
   padding-top: 40px;
-  color: white;
+  color: black;
 }
 
 .buttons {
@@ -91,8 +91,9 @@ video {
   background: transparent;
   border: none;
   cursor: pointer;
-  border-bottom: 2px white solid;
+  border-bottom: 2px black solid;
   transition-duration: 0.3s;
+  color: #f4cd82;
 }
 
 .buttons > button::after {
@@ -102,7 +103,7 @@ video {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(to right, #042d49, #042d49);
+  background: linear-gradient(to right, #f4cd82, #f4cd82);
   transform: scaleX(0);
   transition: transform 0.5s ease;
   transform-origin: left;
@@ -111,7 +112,10 @@ video {
 .buttons > button:hover::after {
   transform: scaleX(1);
 }
-
+.Heading > h1 {
+  font-weight: 400;
+  font-family: Cfont, sans-serif;
+}
 .text {
   height: 100%;
   width: "";
@@ -124,10 +128,8 @@ video {
   font-family: Cfont, sans-serif;
   text-align: center;
 }
-
-.Heading > h1 {
-  font-weight: 400;
-  font-family: Cfont, sans-serif;
+.text > h1 {
+  color: #f4cd82;
 }
 
 .cardsmain {
@@ -157,6 +159,7 @@ video {
   padding: 20px;
   font-family: Cfont, sans-serif;
   overflow: hidden !important;
+  /* border: 2px #f4cd82 solid; */
 }
 
 .cardtext {
@@ -186,7 +189,7 @@ video {
   position: absolute;
   bottom: -3px;
   transition-duration: 0.5s;
-  border: 0.1px white solid;
+  border: 0.1px #f4cd82 solid;
 }
 
 .cardimage:hover > hr {
@@ -197,7 +200,7 @@ video {
   position: absolute;
   text-align: center;
   font-size: 30px;
-  color: white;
+  color: black;
   bottom: 30px;
   transition-duration: 0.5s;
   font-family: Cfont, sans-serif;
@@ -257,18 +260,18 @@ video {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 1px black solid;
+  border: 1px #f4cd82 solid;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  color: #042d49;
+  color: #f4cd82;
   transition-duration: 0.3s;
   cursor: pointer;
 }
 .icon:hover {
-  background-color: #042d49;
-  color: white;
+  background-color: #f4cd82;
+  color: black;
 }
 .reizeltext {
   height: 100%;
@@ -285,6 +288,7 @@ video {
 
 .reizeltext > h1 {
   font-family: Cfont, sans-serif;
+  color: #f4cd82;
 }
 
 .slick-prev:before,
@@ -309,8 +313,8 @@ video {
   padding: 60px;
   height: 70%;
   /* width: 99.83%; */
-  background-color: #042d49;
-  border: 1px #042d49 solid;
+  background-color: #f4cd82;
+  border: 1px #f4cd82 solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -331,11 +335,11 @@ video {
   font-size: 20px;
   padding-left: 10px;
   background: transparent;
-  border-bottom: 2px white solid;
-  color: white;
+  border-bottom: 2px black solid;
+  color: black;
 }
 input::placeholder {
-  color: white;
+  color: black;
 }
 .inputdiv > button {
   height: 70px;
@@ -343,17 +347,17 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   background: transparent;
-  border: 2px white solid;
+  border: 2px black solid;
   padding: 20px 80px;
-  color: white;
+  color: black;
   font-size: 28px;
   transition-duration: 0.6s;
   cursor: pointer;
 }
 
 .inputdiv > button:hover {
-  background: white;
-  color: #042d49;
+  background: black;
+  color: #f4cd82;
 }
 
 .checkboxdiv {
@@ -394,6 +398,7 @@ input::placeholder {
 
 .newstext > h1 {
   font-size: 50px;
+  color: #f4cd82;
 }
 
 .newstext > p {
@@ -403,7 +408,7 @@ input::placeholder {
 
 .newstext > button {
   padding: 15px 60px;
-  border: 2px #042d49 solid;
+  border: 2px #f4cd82 solid;
   background: transparent;
   font-size: 20px;
   cursor: pointer;
@@ -411,9 +416,9 @@ input::placeholder {
 }
 
 .newstext > button:hover {
-  background: #042d49;
+  background: #f4cd82;
   transition-duration: 0.3;
-  color: white;
+  color: black;
 }
 
 .work {
@@ -422,7 +427,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: black;
   text-align: center;
   background-image: url("../public/9.jpeg");
   background-attachment: fixed;
@@ -434,6 +439,7 @@ input::placeholder {
 
 .work > h1 {
   font-size: 30px;
+  color: #f4cd82;
 }
 
 .work > hr {
@@ -444,22 +450,23 @@ input::placeholder {
   font-size: 22px;
   width: 50%;
   line-height: 30px;
+  color: #f4cd82;
 }
 
 .work > button {
   padding: 15px 60px;
-  border: 2px white solid;
+  border: 2px black solid;
   font-size: 25px;
   background-color: transparent;
   transition-duration: 0.6s;
-  color: white;
+  color: black;
   cursor: pointer;
 }
 
 .work > button:hover {
-  border: 2px white solid;
-  background: white;
-  color: #042d49;
+  border: 2px black solid;
+  background: black;
+  color: #f4cd82;
 }
 
 @media only screen and (max-width: 960px) {

@@ -36,8 +36,8 @@
   margin: 0 15px; /* Adjust spacing as needed */
   padding: 10px 20px;
   background: transparent;
-  border: 2px #042d49 solid;
-  color: #042d49;
+  border: 2px #f4cd82 solid;
+  color: #f4cd82;
   border-radius: 2px;
   cursor: pointer;
   font-size: 20px;
@@ -45,7 +45,7 @@
   font-weight: 600;
 }
 .arrow:hover {
-  background: #042d49;
+  background: #f4cd82;
   color: white;
 }
 
